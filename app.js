@@ -21,6 +21,6 @@ app.get("/",function(req,res)
     //res.send("hey there");
 })
 
-app.listen(process.env.PORT||3000,process.env.IP||"127.0.0.1",function(){
+app.listen(process.env.PORT||3000,function(){
     console.log("started!!!");
 })
