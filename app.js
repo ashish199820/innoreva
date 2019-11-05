@@ -1,6 +1,8 @@
 var express =require("express");
+var dotenv = require("dotenv");
 var app =express();
 //var request= require("request");
+dotenv.config();
 var ejs= require("ejs");
 var galleryRoute = require('./router/galleryRoute');
 
@@ -19,6 +21,6 @@ app.get("/",function(req,res)
     //res.send("hey there");
 })
 
-app.listen(3000,function(){
+app.listen(process.env.PORT||3000,process.env.IP||"127.0.0.1",function(){
     console.log("started!!!");
 })
