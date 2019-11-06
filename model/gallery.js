@@ -1,15 +1,16 @@
 const mongoose=require('mongoose');
-const Joi=require('joi');
+const Joi=require('@hapi/joi');
 const ImageSchema = new mongoose.Schema({
   url:{
           type:String,
           required:true,
-          unique:true
+          
   },
   tag:{
           type:String,
           required:true
   },
+
   description:{
           type:String
   }
@@ -25,4 +26,4 @@ function validateImage(image){
 }
 exports.validateImage=validateImage;
 exports.ImageSchema=ImageSchema;
-exports.Image=Image;
+exports.Gallery=Image;
