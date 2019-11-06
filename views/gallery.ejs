@@ -26,6 +26,12 @@
     <!--=========== BEGIN GALLERY SECTION ================-->
     <section id="gallery">
       <div class="container">
+          <div class="">
+          <%tags.forEach(function(tag){%>
+            <button type="button" class="btn btn-default btn-lg" data-rel="<%=tag.tag%>"><%=tag.tag%></button>
+          <%})%>
+          </div>
+        </div>
         <div class="row">
           <div class="col-lg-12 col-md-12 col-sm-12">
             <div id="gallerySLide" class="gallery_area">
@@ -42,8 +48,7 @@
                 <span class="view_btn">View</span>
                 </a>
                 
-                <div class="fb-post" data-href="https://m.facebook.com/teaminnoreva/photos/a.109327420491488/118472302910333/?type=3&source=48"
-                     data-width="350"></div>
+                
 
                 <a href="/public/img/gallery/b4.jpg" title="Class Room">
                   <img class="gallery_img" src="/public/img/gallery/b4.jpg" alt="img" />
