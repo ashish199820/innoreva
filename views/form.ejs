@@ -2,26 +2,37 @@
 <html>
     <head>
         <title>
-
-        </title>
+       </title>
         <link rel="stylesheet" href="/public/style.css">
        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="/public/myscript.js"></script>  <!--script.js must be insluded before jquery or it will not work-->
     </head>
-    <body >
-
-        
+<body >
 <div class="container">
 <h1>create new form tag</h1>
-<form action="/campgrounds" method="POST">
+<form action="/post/image" method="POST">
     <div class="form-group">
-        <label for="Email">Email:</label>
-<input type="text" name= "name" placeholder="name" class="form-control">
-<label >image</label>
-<input type="text" name = "image" placeholder="image" class="form-control">
+        <label for="link">link of google drive or fb post:</label>
+<input type="text" name= "url" placeholder="name" class="form-control">
+<label >tag</label>
+<select name="tag" class="form-control">
+    <% tags.forEach((data)=>{%>
+       <option value="<%=data.tag%>"><%= data.tag%></option> 
+   <% })%>
+</select>
+
 <label>Description:</label>
-<textarea name="description" cols="30" rows="4" placeholder="description" class="form-control"></textarea>
+<input type="text" name = "description" placeholder="description" class="form-control">
+<button class="btn btn-primary btn-large"> submit</button>  <!--to post the form-->
+</div>
+</form>
+<br>
+<h3><i>------------------------------or update tags-----------------------------------</i></h3>
+<form action="/post/tag" method="POST">
+<div class="form-group">
+<label >enter unique tag:</label>
+<input type="text" name= "tag" placeholder="tag" class="form-control">
 <button class="btn btn-primary btn-large"> submit</button>  <!--to post the form-->
 </div>
 </form>
