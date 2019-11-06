@@ -13,13 +13,12 @@ mongoose.connect("mongodb://localhost/innoreva",{useNewUrlParser:true}).then(()=
 });
 //app.use("/gallery",galleryRoute);
 app.set("view engine","ejs");   ///set template engine to ejs
-<<<<<<< HEAD
+
 app.use(bodyParser.urlencoded({extended:true}));
-=======
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
->>>>>>> 997edf84be0d121f0178b10979359e0a80fd66f1
 //////it will have two routes 1. search 2. result
 app.use("/public",express.static(__dirname+'/public'));
 app.use('/gallery',galleryRoute);
