@@ -24,87 +24,26 @@
     <!--=========== END COURSE BANNER SECTION ================-->
     
     <!--=========== BEGIN GALLERY SECTION ================-->
-    <section id="gallery">
-      <div class="container">
-          <div class="">
+    <section id="">
+      <div class="container" >
+          <div class="col-md-12 col-sm-12 ">
           <%tags.forEach(function(tag){%>
-            <button type="button" class="btn btn-default btn-lg" data-rel="<%=tag.tag%>"><%=tag.tag%></button>
+            <button type="button" class="btn btn-default btn-lg gbutton" style="margin-left: 7%;" data-rel="<%=tag.tag%>"><%=tag.tag%></button>
           <%})%>
           </div>
-        </div>
+        
         <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12">
-            <div id="gallerySLide" class="gallery_area">
-                <a href="/public/img/gallery/b1.jpg" title="Class Room">
-                  <img class="gallery_img" src="/public/img/gallery/b1.jpg" alt="img" />
-                <span class="view_btn">View</span>
-                </a>
-                <a href="/public/img/gallery/b2.jpg" title="Class Room">
-                  <img class="gallery_img" src="/public/img/gallery/b2.jpg" alt="img" />
-                <span class="view_btn">View</span>
-                </a>
-                <a href="/public/img/gallery/b3.jpg" title="Class Room">
-                  <img class="gallery_img" src="/public/img/gallery/b3.jpg" alt="img" />
-                <span class="view_btn">View</span>
-                </a>
-                
-                
-
-                <a href="/public/img/gallery/b4.jpg" title="Class Room">
-                  <img class="gallery_img" src="/public/img/gallery/b4.jpg" alt="img" />
-                <span class="view_btn">View</span>
-                </a>
-                <a href="/public/img/gallery/b5.jpg" title="Class Room">
-                  <img class="gallery_img" src="/public/img/gallery/b5.jpg" alt="img" />
-                <span class="view_btn">View</span>
-                </a>
-                <a href="/public/img/gallery/b6.jpg" title="Class Room">
-                  <img class="gallery_img" src="/public/img/gallery/b6.jpg" alt="img" />
-                <span class="view_btn">View</span>
-                </a>
-                <a href="/public/img/gallery/b7.jpg" title="Class Room">
-                  <img class="gallery_img" src="/public/img/gallery/b7.jpg" alt="img" />
-                <span class="view_btn">View</span>
-                </a>
-                <a href="/public/img/gallery/b8.jpg">
-                  <img class="gallery_img" src="/public/img/gallery/b8.png" alt="img" />
-                  <span class="view_btn">View</span>
-                </a>
-                 <a href="/public/img/gallery/b9.jpg" title="This is Title">
-                  <img class="gallery_img" src="/public/img/gallery/b9.jpg" alt="img" />
-                <span class="view_btn">View</span>
-                </a>
-                <a href="/public/img/gallery/b10.jpg" title="This is Title2">
-                  <img class="gallery_img" src="/public/img/gallery/b10.png" alt="img" />
-                  <span class="view_btn">View</span>
-                </a>
-                <a href="/public/img/gallery/b11.jpg" title="This is Title3">
-                  <img class="gallery_img" src="/public/img/gallery/b11.png" alt="img" />
-                  <span class="view_btn">View</span>
-                </a>
-                <a href="/public/img/gallery/b12.jpg" title="This is Title4">
-                  <img class="gallery_img" src="/public/img/gallery/b12.jpg" alt="img" />
-                  <span class="view_btn">View</span>
-                </a>
-                <a href="/public/img/gallery/img-large1.jpg" title="This is Title5">
-                  <img class="gallery_img" src="/public/img/gallery/img-small1.jpg" alt="img" />
-                  <span class="view_btn">View</span>
-                </a>
-                <a href="/public/img/gallery/img-large2.jpg">
-                  <img class="gallery_img" src="/public/img/gallery/img-small2.jpg" alt="img" />
-                  <span class="view_btn">View</span>
-                </a>
-                <a href="/public/img/gallery/img-large3.jpg">
-                  <img class="gallery_img" src="/public/img/gallery/img-small3.jpg" alt="img" />
-                  <span class="view_btn">View</span>
-                </a>
-                <a href="/public/img/gallery/img-large4.jpg">
-                  <img class="gallery_img" src="/public/img/gallery/img-small4.jpg" alt="img" />
-                  <span class="view_btn">View</span>
-                </a>
-            </div>
+            <div id="gallerySLide" class="gallery_area col-md-12 col-sm-24 ">
+                  <%images.forEach((image)=>{%>
+                    <span class="all <%=image.tag%> animation img-fluid img-responsive" style="display:inline">
+                    <a href="<%=image.url%>" title="<%=image.description%>"  >
+                      <img class="gallery_img img-responsive " src="<%=image.url%>" alt="img" />
+                    <span class="view_btn">View</span>
+                    </a>
+                  </span>
+                 <% })%>
+                </div>
           </div>
-        </div>
       </div>
     </section>
     <!--=========== END GALLERY SECTION ================-->

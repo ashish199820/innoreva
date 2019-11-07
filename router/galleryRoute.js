@@ -4,13 +4,17 @@ var {Gallery} = require("../model/gallery");
 var {Tag} = require("../model/tag");
 
 
-router.get('/',function(req,res){
-    Tag.find({}).then((tags)=>{
-        res.render('gallery.ejs',{tags:tags});
-    }).catch((err)=>{
-        console.log(err);
-        res.send(err);
-    })
+router.get('/',async function(req,res){
+    try{
+    var tags = await Tag.find({});
+    var img= await Gallery.find({});
+        res.render('gallery.ejs',{tags:tags,images:img});
+    }catch(err){
+        res.send(err.details[0].message);
+    }
+       
+       
+  
     
 })
 
