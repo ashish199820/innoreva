@@ -13,6 +13,9 @@ mongoose.connect("mongodb://localhost/innoreva",{useNewUrlParser:true}).then(()=
 });
 //app.use("/gallery",galleryRoute);
 app.set("view engine","ejs");   ///set template engine to ejs
+
+app.use(bodyParser.urlencoded({extended:true}));
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
