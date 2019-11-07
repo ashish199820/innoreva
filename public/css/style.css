@@ -34,14 +34,16 @@ License URI: http://www.gnu.org/licenses/gpl.html
 /*--------------------*/
 /* BASIC TYPOGRAPHY */
 /*--------------------*/
-
+#gallery{
+  background: black;
+}
 body,html{
   overflow-x:hidden;
 }
 body {
 font-family: 'Merriweather', serif;
   overflow-x: hidden !important;
-  background: #000;
+  background:white;
 }
 
 ul{
@@ -231,7 +233,7 @@ img{
 }
 .slider_caption {
   left: 5%;
-  position: absolute;
+ position:sticky; 
   top: 25%;
   width: 50%;
 }
