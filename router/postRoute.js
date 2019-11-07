@@ -22,7 +22,7 @@ router.post('/image',async function(req,res){
         console.log(url.hostname)
         if(url.host=='drive.google.com')
         {    var id =str.split('/')[3];
-            url='https://drive.google.com/uc?export=view&id='+id;
+            url='https://drive.google.com/thumbnail?&id='+id;
         }
         else {
             url=req.body.url;

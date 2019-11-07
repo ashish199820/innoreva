@@ -1,14 +1,14 @@
-alert("linked");
-//$(function() {
-    alert('running');
+
+$(function() {
+   
     var selectedClass = "";
-    $(".filter").click(function(){
+    $(".gbutton").click(function(){
     selectedClass = $(this).attr("data-rel");
-    $("#gallery").fadeTo(100, 0.1);
-    $("#gallery div").not("."+selectedClass).fadeOut().removeClass('animation');
+    //$("#gallery").fadeTo(100, 0.1);
+    $("#gallerySLide span").not("."+selectedClass).fadeOut().css("display:inline");
     setTimeout(function() {
-    $("."+selectedClass).fadeIn().addClass('animation');
-    $("#gallery").fadeTo(300, 1);
+    $("."+selectedClass).fadeIn().css("display:inline");
+    $("#gallerySLide").fadeTo(300, 1).css("display:inline");
     }, 300);
     });
-    //});
+    });

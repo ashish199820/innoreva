@@ -260,7 +260,7 @@
   padding-left: 80px;
   padding-right: 80px; }
 
-.tos-inline {
+/* .tos-inline {
   opacity: 0;
   -webkit-transition: opacity 0.4s ease;
   -moz-transition: opacity 0.4s ease;
@@ -272,7 +272,7 @@
   position: relative;
   top: auto;
   left: auto;
-  right: auto; }
+  right: auto; } */
   .tos-inline.tos-prev {
     margin-right: -60px; }
   .tos-inline.tos-next {

@@ -41,6 +41,7 @@ body,html{
 body {
 font-family: 'Merriweather', serif;
   overflow-x: hidden !important;
+  background: #000;
 }
 
 ul{
@@ -1460,14 +1461,19 @@ div[data-dimension] {
     transition: all 0.5s;  
 }
 .gallery_area a>img{
-  width: 100%;
+  width: 80%;
   height: 100%;  
+  border: 4px inset powderblue;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
 .gallery_area a:hover .gallery_img{
   transform: scale(2.2);
+}
+.gallery_img{
+  margin:10%
+
 }
 .view_btn {
   display: none;
@@ -1831,4 +1837,12 @@ div[data-dimension] {
 @media(max-width:320px ){
 
 	
+}
+
+.animation{
+  transition-property: all;
+  display:inline
+  /* -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1); */
 }
