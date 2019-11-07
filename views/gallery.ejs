@@ -6,7 +6,7 @@
     <li><a href="course-archive.html">Projects</a></li>
     <li><a href="scholarship.html">Registration</a></li>
    
-    <li><a href="gallery.html">GALLERY</a></li>                
+    <li><a href="/gallery">GALLERY</a></li>                
     
     
     <li><a href="contact.html">Contact<i class="audio description icon" style="font-size: 2em;"></i></a></li>
@@ -18,15 +18,16 @@
 <!-- END MENU -->    
 </header>
     <!--=========== BEGIN COURSE BANNER SECTION ================-->
-    <section id="imgBanner">
+    <div  style="background: black;">
+    <section id="imgBanner" style="background: black;">
       <h2 style="color: #c9a6a6;">Gallery</h2>
     </section>
     <!--=========== END COURSE BANNER SECTION ================-->
     
     <!--=========== BEGIN GALLERY SECTION ================-->
-    <section id="">
+    <section id="gallery" class = "container">
       <div class="container" >
-          <div class="col-md-12 col-sm-12 ">
+          <div class="col-md-12 col-sm-12 " >
           <%tags.forEach(function(tag){%>
             <button type="button" class="btn btn-default btn-lg gbutton" style="margin-left: 7%;" data-rel="<%=tag.tag%>"><%=tag.tag%></button>
           <%})%>
@@ -46,6 +47,7 @@
           </div>
       </div>
     </section>
+  </div>
     <!--=========== END GALLERY SECTION ================-->
     
     <!--=========== BEGIN FOOTER SECTION ================-->
