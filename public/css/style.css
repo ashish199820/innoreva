@@ -34,9 +34,9 @@ License URI: http://www.gnu.org/licenses/gpl.html
 /*--------------------*/
 /* BASIC TYPOGRAPHY */
 /*--------------------*/
-#gallery{
+/* #gallery{
   background: black;
-}
+} */
 body,html{
   overflow-x:hidden;
 }
@@ -156,12 +156,12 @@ img{
   color: #fff;
 }
 .navbar-default {
-  background-color: #313b3d;
+  background-color:white;
   border-color: transparent;
 }
 #navbar{overflow-x: hidden;}
 .navbar-default .navbar-nav > li > a {
-  color: #fff;
+  color: #000;
   padding: 30px 15px;
   text-transform: uppercase;
   -webkit-transition: all 0.5s;
@@ -218,7 +218,12 @@ img{
 /*--------------------*/
 /* HOME SLIDER SECTION */
 /*--------------------*/
-
+.tag {
+  background:rgba(1,1,1,0.2);
+  position: fixed;
+  top: 90px;
+  z-index: 1;
+}
 #slider{
   float: left;
   display: inline;
@@ -976,13 +981,13 @@ div[data-dimension] {
   background-image: url("img/banner.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  display: inline;
+  /* display: inline; */
   float: left;
   height: 300px;
   margin-top: 77px;
   padding: 118px 0;
   text-align: center;
-  width: 100%;
+  width: 120%;
 }
 #imgBanner h2 {
   color: #fff;
@@ -1441,15 +1446,16 @@ div[data-dimension] {
 /*--------------------*/
 
 #gallery {
-  display: inline;
+  /* display: inline; */
   float: left;
-  padding: 60px 0;
-  width: 100%;
+   padding: 60px 0; 
+  width: 100%; 
 }
 .gallery_area{
   float: left;
-  display: inline;
-  width: 100%;
+  /* display: inline; */
+  width: 112%;
+  margin:7%;
 }
 .gallery_area a {  
   display: inline-block;
@@ -1817,7 +1823,7 @@ div[data-dimension] {
   .slider_btn {font-size: 13px;padding: 5px 10px;}
   .error_page_content h1 {font-size: 100px;}
   #imgBanner h2 {font-size: 40px;}
-  #imgBanner {height: 200px;padding: 80px 0;}
+  #imgBanner {height: 200px;padding: 80px 0;margin:50% 0 0 0}
   .gallery_area a {width: 100%;margin-right: 0;margin-left: 0;height: 250px;}
  
 }

@@ -9,7 +9,7 @@
     <li><a href="/gallery">GALLERY</a></li>                
     
     
-    <li><a href="contact.html">Contact<i class="audio description icon" style="font-size: 2em;"></i></a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>           
 </div><!--/.nav-collapse -->
 </div>     
@@ -18,30 +18,31 @@
 <!-- END MENU -->    
 </header>
     <!--=========== BEGIN COURSE BANNER SECTION ================-->
-    <div  style="background: black;">
-    <section id="imgBanner" style="background: black;">
-      <h2 style="color: #c9a6a6;">Gallery</h2>
-    </section>
+    <div  style="background: rgb(238, 234, 234);position: relative;top:0">
+    
     <!--=========== END COURSE BANNER SECTION ================-->
     
     <!--=========== BEGIN GALLERY SECTION ================-->
     <section id="gallery" class = "container">
-      <div class="container" >
-          <div class="col-md-12 col-sm-12 " >
+      <div class="container" style="margin: 10% 0;" >
+        <div class="row">
+          <div class="col-md-12 col-sm-12 tag" >
           <%tags.forEach(function(tag){%>
-            <button type="button" class="btn btn-default btn-lg gbutton" style="margin-left: 7%;" data-rel="<%=tag.tag%>"><%=tag.tag%></button>
+            <button type="button" class="btn btn-default btn-lg gbutton" style="margin-left: 7%;min-width: 15%;margin:5px" data-rel="<%=tag.tag%>"><%=tag.tag%></button>
           <%})%>
           </div>
+        </div>
         
-        <div class="row">
-            <div id="gallerySLide" class="gallery_area col-md-12 col-sm-24 ">
+       <div style="height:9em"></div>
+       
+            <div id="gallerySLide" class="gallery_area col-md-6 col-sm-6 ">
                   <%images.forEach((image)=>{%>
-                    <span class="all <%=image.tag%> animation img-fluid img-responsive" style="display:inline">
+                    <div class="all <%=image.tag%> animation img-fluid img-responsive" style="margin-left:1px">
                     <a href="<%=image.url%>" title="<%=image.description%>"  >
                       <img class="gallery_img img-responsive " src="<%=image.url%>" alt="img" />
                     <span class="view_btn">View</span>
                     </a>
-                  </span>
+                  </div>
                  <% })%>
                 </div>
           </div>
