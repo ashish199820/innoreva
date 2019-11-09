@@ -1455,7 +1455,8 @@ div[data-dimension] {
   float: left;
   /* display: inline; */
   width: 112%;
-  margin:7%;
+  margin:10% 0;
+  padding-right:8%;
 }
 .gallery_area a {  
   display: inline-block;
