@@ -25,8 +25,8 @@
     <!--=========== BEGIN GALLERY SECTION ================-->
     <section id="gallery" class = "container">
       <div class="container" style="margin: 10% 0;" >
-        <div class="row">
-          <div class="col-md-12 col-sm-12 tag" >
+        <div class="row tag">
+          <div class="col-md-12 col-sm-12 " >
           <%tags.forEach(function(tag){%>
             <button type="button" class="btn btn-default btn-lg gbutton" style="margin-left: 7%;min-width: 15%;margin:5px" data-rel="<%=tag.tag%>"><%=tag.tag%></button>
           <%})%>
@@ -37,7 +37,7 @@
        
             <div id="gallerySLide" class="gallery_area col-md-6 col-sm-6 ">
                   <%images.forEach((image)=>{%>
-                    <div class="all <%=image.tag%> animation img-fluid img-responsive" style="margin-left:1px">
+                    <div class="all <%=image.tag%> animation img-fluid img-responsive " style="margin-left:1px">
                     <a href="<%=image.url%>" title="<%=image.description%>"  >
                       <img class="gallery_img img-responsive " src="<%=image.url%>" alt="img" />
                     <span class="view_btn">View</span>
