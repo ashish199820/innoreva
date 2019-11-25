@@ -221,7 +221,7 @@ img{
 .tag {
   background:rgba(1,1,1,0.2);
   position: fixed;
-  width:100%
+  width:100%;
   top: 90px;
   z-index: 1;
 }
