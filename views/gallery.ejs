@@ -17,29 +17,27 @@
 </div>
 <!-- END MENU -->    
 </header>
-
     <!--=========== BEGIN COURSE BANNER SECTION ================-->
-    <section style="position:relative;top:20%;width:100% ;height:20%;color: brown;">  <div > 
-        <h1>hey there</h1> hey there </div></section>
-  
+    <div  style="background: rgb(238, 234, 234);position: relative;top:0">
+    
     <!--=========== END COURSE BANNER SECTION ================-->
-    <!-- <div class="row tag">
-      <div class="col-md-12 col-sm-12 " >
-      <%tags.forEach(function(tag){%>
-        <button type="button" class="btn btn-default btn-lg gbutton" style="margin-left: 7%;min-width: 15%;margin:5px" data-rel="<%=tag.tag%>"><%=tag.tag%></button>
-      <%})%>
-      </div>
-    </div> -->
+    
     <!--=========== BEGIN GALLERY SECTION ================-->
-    <!-- <section id="gallery" class = "container">
-      
-       
+    <section id="gallery" class = "container">
+      <div class="container" style="margin: 10% 0;" >
+        <div class="row tag">
+          <div class="col-md-12 col-sm-12 " >
+          <%tags.forEach(function(tag){%>
+            <button type="button" class="btn btn-default btn-lg gbutton" style="margin-left: 7%;min-width: 15%;margin:5px" data-rel="<%=tag.tag%>"><%=tag.tag%></button>
+          <%})%>
+          </div>
+        </div>
         
        <div style="height:9em"></div>
        
             <div id="gallerySLide" class="gallery_area col-md-6 col-sm-6 ">
                   <%images.forEach((image)=>{%>
-                    <div class="all <%=image.tag%> animation img-fluid img-responsive " style="margin-left:5%;margin-right:5%">
+                    <div class="all <%=image.tag%> animation img-fluid img-responsive " style="margin-left:1px">
                     <a href="<%=image.url%>" title="<%=image.description%>"  >
                       <img class="gallery_img img-responsive " src="<%=image.url%>" alt="img" />
                     <span class="view_btn">View</span>
@@ -47,10 +45,10 @@
                   </div>
                  <% })%>
                 </div>
-        
-      
-    </section> -->
-
+          </div>
+      </div>
+    </section>
+  </div>
     <!--=========== END GALLERY SECTION ================-->
     
     <!--=========== BEGIN FOOTER SECTION ================-->

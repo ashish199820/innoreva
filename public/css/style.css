@@ -37,9 +37,6 @@ License URI: http://www.gnu.org/licenses/gpl.html
 /* #gallery{
   background: black;
 } */
-* {
-  box-sizing: border-box;
-}
 body,html{
   overflow-x:hidden;
 }
@@ -47,7 +44,6 @@ body {
 font-family: 'Merriweather', serif;
   overflow-x: hidden !important;
   background:white;
-
 }
 
 ul{
@@ -91,7 +87,6 @@ img{
   bottom:0;
   background-color:#000; /* change if the mask should have another color then white */
   z-index:99999; /* makes sure it stays on top */
-  
 }
 
 #status {
@@ -226,7 +221,7 @@ img{
 .tag {
   background:rgba(1,1,1,0.2);
   position: fixed;
-  width:100%;
+  width:100%
   top: 90px;
   z-index: 1;
 }
