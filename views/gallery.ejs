@@ -6,7 +6,7 @@
     <li><a href="course-archive.html">Projects</a></li>
     <li><a href="scholarship.html">Registration</a></li>
    
-    <li><a href="/gallery">GALLERY</a></li>                
+    <li><a href="/gallery" class="active">GALLERY</a></li>                
     
     
     <li><a href="contact.html">Contact</a></li>
@@ -17,12 +17,32 @@
 </div>
 <!-- END MENU -->    
 </header>
+<div style="clear: both;min-height: 12%;"></div>
+ <div class="container-fluid" >
+        <div class="tag">
+          <div  style="display: flex ;justify-content: space-evenly;flex-flow: row wrap;" >
+          <%tags.forEach(function(tag){%>
+            <button type="button" class="btn btn-default btn-lg gbutton" style="margin-left: 7%;min-width: 15%;margin:5px" data-rel="<%=tag.tag%>"><%=tag.tag%></button>
+          <%})%>
+          </div>
+        </div>
+      </div>
+      <div style="clear: both;min-height: 17%;"></div>
+      <div class="container-fluid">
+          <div id="gallerySLide" class="gallery_area row">
+              <%images.forEach((image)=>{%>
+                <div class="all <%=image.tag%> animation img-fluid img-responsive col-lg-2 col-md-3 col-sm-4 col-xs-12 "  style="margin-left:1%">
+                <a href="<%=image.url%>" title="<%=image.description%>" style="width:100% ;margin:auto"  >
+                  <img style="width:100%" class="gallery_img img-responsive " src="<%=image.url%>" alt="img" />
+                <span class="view_btn">View</span>
+                </a>
+              </div>
+             <% })%>
+            </div>
+      </div>
     <!--=========== BEGIN COURSE BANNER SECTION ================-->
-    <div  style="background: rgb(238, 234, 234);position: relative;top:0">
+    <!-- <div  style="background: rgb(238, 234, 234);position: relative;top:0">
     
-    <!--=========== END COURSE BANNER SECTION ================-->
-    
-    <!--=========== BEGIN GALLERY SECTION ================-->
     <section id="gallery" class = "container">
       <div class="container" style="margin: 10% 0;" >
         <div class="row tag">
@@ -48,7 +68,7 @@
           </div>
       </div>
     </section>
-  </div>
+  </div> -->
     <!--=========== END GALLERY SECTION ================-->
     
     <!--=========== BEGIN FOOTER SECTION ================-->

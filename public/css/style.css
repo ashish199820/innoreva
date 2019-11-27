@@ -37,6 +37,14 @@ License URI: http://www.gnu.org/licenses/gpl.html
 /* #gallery{
   background: black;
 } */
+.project{
+  background: #37c6f5;
+  margin:1%;
+  box-sizing: border-box;
+  max-width:98%;
+  height:25%
+
+}
 body,html{
   overflow-x:hidden;
 }
@@ -220,8 +228,8 @@ img{
 /*--------------------*/
 .tag {
   background:rgba(1,1,1,0.2);
-  position: fixed;
-  width:100%
+  position: relative;
+  width:100%;
   top: 90px;
   z-index: 1;
 }

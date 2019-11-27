@@ -7,7 +7,8 @@ var mongoose = require('mongoose');
 dotenv.config();
 var ejs= require("ejs");
 var galleryRoute = require('./router/galleryRoute');
-var postRoute = require('./router/postRoute')
+var postRoute = require('./router/postRoute');
+var projectRoute = require('./router/projectRoute');
 mongoose.connect("mongodb://localhost/innoreva",{useNewUrlParser:true}).then(()=>{
     console.log("db connectd");
 });
@@ -23,7 +24,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use("/public",express.static(__dirname+'/public'));
 app.use('/gallery',galleryRoute);
 app.use('/post',postRoute);
-
+app.use('/projects',projectRoute);
 
 app.get("/",function(req,res)
 {
