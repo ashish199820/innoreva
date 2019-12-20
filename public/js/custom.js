@@ -29,7 +29,25 @@ jQuery(function($){
 	/* ----------------------------------------------------------- */
   /*  1. DROPDOWN MENU
   /* ----------------------------------------------------------- */
+$(".project").click(()=>{
+	//console.log($(this).text());
+	var title = $(this).find(".project").attr('data-title');
+	var image = $(this).find(".project").attr('data-image');
+	var brief = $(this).find(".project").attr('data-brief');
+	var pdflink = $(this).find(".project").attr('data-pdf');
+	console.log(title);
+	console.log(brief);
+	$('#modalHeader').text(title);
+	$('#modalImage').attr('src',image);
+	$('#modalBrief').text(brief);
+	
+	// if(pdflink.length==0)
+	// {
+	// 	$('pdf').css('visibilty','hidden');
+	// }
+	$('#pdf').attr('href',pdflink);
 
+})
    // for hover dropdown menu
   $('ul.nav li.dropdown').hover(function() {
       $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(200);

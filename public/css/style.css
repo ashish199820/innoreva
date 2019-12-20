@@ -42,7 +42,8 @@ License URI: http://www.gnu.org/licenses/gpl.html
   margin:1%;
   box-sizing: border-box;
   max-width:98%;
-  height:25%
+  height:30rem;
+  overflow-wrap: break-word;
 
 }
 body,html{
