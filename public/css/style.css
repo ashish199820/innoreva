@@ -570,7 +570,6 @@ div[data-dimension] {
   display: inline;
   width: 100%;
 }
-.course_nav{}
 .course_nav li {
   display: block;
   float: left;
@@ -756,7 +755,6 @@ div[data-dimension] {
   display: inline;
   width: 100%;
 }
-.tutors_nav{}
 
 .tutors_nav>li {
   display: block;
@@ -768,14 +766,12 @@ div[data-dimension] {
   margin-right: 0px;
 }
 .single_tutors {
-  display: inline;
-  float: left;
+  /* display: inline;
   min-height: 150px;
-  width: 100%;
-  padding-bottom: 15px;
+  padding-bottom: 15px; */
 }
 .tutors_thumb {
-  border-radius: 50%;
+  border-radius: 80%;
   display: block;
   font-size: 15px;
   height: 165px;
@@ -784,13 +780,13 @@ div[data-dimension] {
   padding: 15px 0 0 18px;
   text-align: center;
   width: 75%;
-  -webkit-transition: all 0.5s ease-in-out;
+  /* -webkit-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; */
 }
-.single_tutors:hover .tutors_thumb{
+/* .single_tutors:hover .tutors_thumb{
   padding: 0px;
-}
+} */
 .tutors_thumb > img {
   border-radius: 50%;
   height: 150px;
