@@ -33,6 +33,10 @@ app.get("/",function(req,res)
     //res.send("hey there");
 })
 
+app.get("/team",function(req,res){
+    res.render("team");
+})
+
 app.listen(process.env.PORT||3000,function(){
     console.log("started!!!");
 })

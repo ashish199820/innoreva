@@ -661,9 +661,7 @@ div[data-dimension] {
   border-radius: 4px;
 }
 .singCourse_content{
-  float: left;
   display: inline;
-  width: 100%;
   padding: 10px;
 }
 .singCourse_title {
@@ -693,9 +691,7 @@ div[data-dimension] {
 .singCourse_author {
   border-top: 1px solid #efefef;
   display: inline;
-  float: left;
   padding: 20px 10px 0;
-  width: 100%;
 }
 .singCourse_author > img {
   float: left;
@@ -743,18 +739,17 @@ div[data-dimension] {
 /* HOME OUR TUTORS SECTION */
 /*--------------------*/
 
-#ourTutors{
+/* #ourTutors{
   background-color: #ffffff;
   display: inline;
   float: left;
   padding: 60px 0;
   width: 100%;
-}
-.ourTutors_content{
-  float: left;
+} */
+/* .ourTutors_content{
   display: inline;
   width: 100%;
-}
+} */
 
 .tutors_nav>li {
   display: block;
@@ -793,9 +788,7 @@ div[data-dimension] {
   width: 95%;
 }
 .singTutors_content{
-  float: left;
   display: inline;
-  width: 100%;
   padding: 5px;
   text-align: center;
 }
@@ -819,9 +812,7 @@ div[data-dimension] {
   font-size: 13px;
 }
 .singTutors_social{
-  float: left;
   display: inline;
-  width: 100%;
   padding-top: 10px;
 }
 .tutors_socnav{
@@ -865,20 +856,14 @@ div[data-dimension] {
 
 #studentsTestimonial{
   background-color: #f6f6f6;
-  float: left;
   display: inline;
-  width: 100%;  
   padding: 60px 0px;
 }
 .studentsTestimonial_content{
-  float: left;
   display: inline;
-  width: 100%;
 }
 .single_stsTestimonial{
-  float: left;
   display: inline;
-  width: 100%;
   text-align: center;
 }
 .stsTestimonial_msgbox {
@@ -886,10 +871,7 @@ div[data-dimension] {
   border: 1px solid #fff;
   border-radius: 8px;
   display: inline;
-  float: left;
-  margin-bottom: 25px;
   padding: 13px;
-  width: 100%;
   position: relative;
 }
 .stsTestimonial_msgbox:after {
@@ -910,7 +892,6 @@ div[data-dimension] {
   width: 100px;
 }
 .stsTestimonial_content{
-  float: left;
   display: inline;
   width: 100%;
 }
