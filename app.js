@@ -9,8 +9,10 @@ var ejs= require("ejs");
 var galleryRoute = require('./router/galleryRoute');
 var postRoute = require('./router/postRoute');
 var projectRoute = require('./router/projectRoute');
+var loginRoute = require('./router/loginRoute');
+var signupRoute = require('./router/signupRoute');
 mongoose.connect("mongodb://localhost/innoreva",{useNewUrlParser:true}).then(()=>{
-    console.log("db connectd");
+    console.log("db connected");
 });
 //app.use("/gallery",galleryRoute);
 app.set("view engine","ejs");   ///set template engine to ejs
@@ -20,11 +22,13 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
-//////it will have two routes 1. search 2. result
+//it will have two routes 1. search 2. result
 app.use("/public",express.static(__dirname+'/public'));
 app.use('/gallery',galleryRoute);
 app.use('/post',postRoute);
 app.use('/projects',projectRoute);
+app.use('/Login',loginRoute);
+app.use('/Signup',signupRoute);
 
 app.get("/",function(req,res)
 {

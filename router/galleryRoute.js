@@ -12,10 +12,6 @@ router.get('/',async function(req,res){
     }catch(err){
         res.send(err.details[0].message);
     }
-       
-       
-  
-    
 })
 
 
