@@ -9,6 +9,8 @@ var ejs= require("ejs");
 var galleryRoute = require('./router/galleryRoute');
 var postRoute = require('./router/postRoute');
 var projectRoute = require('./router/projectRoute');
+var loginRoute = require('./router/loginRoute');
+var signupRoute = require('./router/signupRoute');
 mongoose.connect("mongodb://localhost/innoreva",{useNewUrlParser:true}).then(()=>{
     console.log("db connectd");
 });
@@ -25,6 +27,8 @@ app.use("/public",express.static(__dirname+'/public'));
 app.use('/gallery',galleryRoute);
 app.use('/post',postRoute);
 app.use('/projects',projectRoute);
+app.use('/Login',loginRoute);
+app.use('/Signup',signupRoute);
 
 app.get("/",function(req,res)
 {
