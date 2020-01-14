@@ -12,15 +12,8 @@ const tagSchema = new mongoose.Schema({
   }
  
 });
-tag= mongoose.model('tag', tagSchema);
+      
+tag = mongoose.model('tag', tagSchema);
 
-// function validateImage(image){
-//         const Schema={
-//                 url:Joi.string().required(),
-//                 tag:Joi.string().required(),
-//                 description:Joi.string()
-//         }
-// }
-//exports.validateImage=validateImage;
-exports.TagSchema=tagSchema;
-exports.Tag=tag
+// exports.TagSchema =tagSchema;
+module.exports = tag

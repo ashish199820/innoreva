@@ -3,7 +3,7 @@ var dotenv = require("dotenv");
 var app =express();
 var bodyParser=require("body-parser");
 var mongoose = require('mongoose');
-//var request= require("request");
+var jwt = module.exports = require("jsonwebtoken");
 dotenv.config();
 var ejs= require("ejs");
 var galleryRoute = require('./router/galleryRoute');
@@ -14,7 +14,8 @@ var signupRoute = require('./router/signupRoute');
 mongoose.connect("mongodb://localhost/innoreva",{useNewUrlParser:true}).then(()=>{
     console.log("db connected");
 });
-//app.use("/gallery",galleryRoute);
+
+
 app.set("view engine","ejs");   ///set template engine to ejs
 
 app.use(bodyParser.urlencoded({extended:true}));
