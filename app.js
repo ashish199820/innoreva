@@ -12,7 +12,7 @@ var projectRoute = require('./router/projectRoute');
 var loginRoute = require('./router/loginRoute');
 var signupRoute = require('./router/signupRoute');
 mongoose.connect("mongodb://localhost/innoreva",{useNewUrlParser:true}).then(()=>{
-    console.log("db connectd");
+    console.log("db connected");
 });
 //app.use("/gallery",galleryRoute);
 app.set("view engine","ejs");   ///set template engine to ejs
