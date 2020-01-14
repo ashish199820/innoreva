@@ -14,14 +14,14 @@ var express = require('express');
      })
      })
 router.post('/',async function(req,res){
-    var pathname = url.parse(req.body.pdflink);
-    var len = req.body.image.length;
-    var image = req.body.image.substr(0,len-1);
-    image=image+'1';
-    console.log(image);
+    // var pathname = url.parse(req.body.pdflink);
+    // var len = req.body.image.length;                    ///////to create downloadble link for pdf on dropbox 
+    // var image = req.body.image.substr(0,len-1);
+    // image=image+'1';
+    
    
     
-    console.log(image[len-1]);
+    
     
  
 try{
@@ -29,7 +29,7 @@ try{
       title:req.body.title,
       image:image,
       brief:req.body.brief,
-      pdflink:'http://www.dl.dropboxusercontent.com'+pathname.path
+      pdflink:req.body.pdflink       /////// using pdflink tag for youtube link videos..
   })
   res.redirect('/post');
     

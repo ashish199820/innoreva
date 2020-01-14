@@ -30,6 +30,10 @@ app.use('/projects',projectRoute);
 app.use('/Login',loginRoute);
 app.use('/Signup',signupRoute);
 
+app.get('/contacts',(req,res)=>{
+    res.render('contact');
+})
+
 app.get("/",function(req,res)
 {
    // var data = JSON.parse(req.body);
