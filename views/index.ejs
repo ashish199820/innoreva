@@ -6,7 +6,7 @@
     <li class="active"><a href="/">Home</a></li>
     <li><a href="/projects">Projects</a></li>
     <!-- <li><a href="scholarship.html">Registration</a></li> -->
-    <li><a href="/post">Upload Projects</a></li>
+    <li><a href="/post" class="project-btn">Upload Projects</a></li>
     <li><a href="/gallery">Gallery</a></li>
     <li ><a href="/contacts">contact us</a></li>
     <!-- <li><a href="/team">Team</a></li> -->
@@ -271,6 +271,31 @@
 
   <!--=========== BEGIN STUDENTS TESTIMONIAL SECTION ================-->
 
+  <script  type="text/javascript" src="../public/js/post-protect.js"></script>
+  
+  <script>
+    $(document).ready(function () {
+      var post = $('.project-btn');
+      // writing Ajax to send data from client side to the server side.
+      post.on('click', function () {
+        token = localStorage.getItem('token_user');
+        console.log("token sent from client side " + token)
+        $.ajax({
+          url: 'http://localhost:3000/post',
+          data: { 'token': token.toString() },
+          type: 'GET',
+          success: function (data) {
+            console.log(data)
+            document.write(data);
+          },
+          error: function (xhr, status, error) {
+            console.log('Error@index.ejs: ' + error.message);
+          },
+        });
+      })
+
+    });   
+  </script>
 
 
   <!--=========== END STUDENTS TESTIMONIAL SECTION ================-->
