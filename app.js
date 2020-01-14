@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
-//////it will have two routes 1. search 2. result
+//it will have two routes 1. search 2. result
 app.use("/public",express.static(__dirname+'/public'));
 app.use('/gallery',galleryRoute);
 app.use('/post',postRoute);
