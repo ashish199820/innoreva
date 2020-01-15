@@ -270,8 +270,8 @@
 
   <!--=========== BEGIN STUDENTS TESTIMONIAL SECTION ================-->
 
-  <script  type="text/javascript" src="../public/js/post-protect.js"></script>
-  
+  <script type="text/javascript" src="../public/js/post-protect.js"></script>
+
   <script>
     $(document).ready(function () {
       var post = $('.project-btn');
@@ -280,12 +280,15 @@
         token = localStorage.getItem('token_user');
         console.log("token sent from client side " + token)
         $.ajax({
-          url: 'http://localhost:3000/post',
+          url: 'http://localhost:3000/post/',
           data: { 'token': token.toString() },
-          type: 'GET',
+          type: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+          },
           success: function (data) {
             console.log(data)
-            document.write(data);
+            // document.write(data);
           },
           error: function (xhr, status, error) {
             console.log('Error@index.ejs: ' + error.message);

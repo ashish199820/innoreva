@@ -10,10 +10,10 @@ mongoose.connect('mongodb://localhost:27017/innoreva', { useNewUrlParser: true, 
 });
 
 
-router.get('/',verifyToken, async function (req, res) {
+router.post('/',verifyToken, async function (req, res) {
     try{
         console.log("rech1");
-        jwt.verify(req.query.token,"Innoreva@SecretKy3786",(err,authData)=>{
+        jwt.verify(req.body.token,"Innoreva@SecretKy3786",(err,authData)=>{
             if(err){
                 res.sendStatus(403);   
             }
@@ -88,7 +88,7 @@ router.post('/tag',verifyToken, async function (req, res) {
 
 function verifyToken(req,res,next){
     // console.log(req);
-    const token = req.query.token;
+    const token = req.body.token;
     if(typeof(token) !== 'undefined'){
         console.log("Token Recieved at backend");
         console.log(token);
