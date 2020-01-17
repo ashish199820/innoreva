@@ -299,8 +299,6 @@
                 $('.form-container').animate({ left: '400px' }, 'slow');
             });
 
-
-
             // writing Ajax to send data from client side to the server side.
             sign.on('click', function () {
                 var userName = document.getElementById('users').value;
@@ -318,8 +316,8 @@
                     data: usr_obj,
                     type: 'POST',
                     success: function (data) {
-                        // var ret = jQuery.parseJSON(data);
-                        console.log('Success: ')
+                        console.log('Success: '+data);
+                        window.location.replace("http://localhost:3000/Login");
                     },
                     error: function (xhr, status, error) {
                         console.log('Error: ' + error.message);
