@@ -19,13 +19,15 @@
       <div style="min-height: 16%;"></div>
       <div style="text-align:center; width:100% ;margin:1%"><h1>Projects</h1></div>
 
-      <div class="container-fluid">
+      <div class="container-fluid" >
           <div class="row">
-             <% datas.forEach((data)=>{%>
-                <div class=" col-lg-3 col-md-4 col-sm-6 col-xs-12 " data-target="#projectModal" data-toggle="modal" ><div class="jumbotron project h3" data-title="<%=data.title%> " data-image="<%=data.image%>" data-brief="<%=data.brief%>" data-pdf = "<%=data.pdflink%>" ><img src="<%=data.image%>" alt="project#"
-                     class="img img-responsive center-block "><%=data.title%></div></div>
+             <% datas.forEach((data)=>{%>>
+                <div class=" col-lg-3 col-md-4 col-sm-6 col-xs-12 " data-target="#projectModal" data-toggle="modal" ><div class="jumbotron project h3" data-title="<%=data.title%> " data-image="<%=data.image%>" data-brief="<%=data.brief%>"  >
+                    <iframe width="100%" height="60%" src="<%=data.image%>"></iframe><%=data.title%></div></div>
               <%})%>
-              
+              <div class=" col-lg-3 col-md-4 col-sm-6 col-xs-12 " data-target="#projectModal" data-toggle="modal" ><div class="jumbotron project h3"  data-title="Top IOT projects" data-image="https://www.youtube.com/embed/QL-6PdiDTeo" data-brief="IOT is growing at an enormous rate . Here are some of it's applications"  >
+                <iframe width="100%" height="60%" src="https://www.youtube.com/embed/QL-6PdiDTeo">
+              </iframe>Top IOT projects</div></div>
           </div>
            
 
@@ -40,16 +42,14 @@
                       <h2 id="modalHeader"></h2>
                   </div>
                   <div class="modal-body">
-                      <img id="modalImage" src=" " alt="" class="img-responsive center-block">
-                      <p id="modalBrief" style="font-size: x-large;"></p>
+                      <iframe  id="modalImage" class="img-responsive center-block" width="350" height="250" >
+              </iframe>
+                      <!-- <img id="modalImage" src=" " alt="" class="img-responsive center-block"> -->
+                      <p id="modalBrief" style="font-size: x-large;text-align: center;"></p>
                       </div>
-                      <div class="modal-footer">
-                        <iframe width="420" height="345" src="https://www.youtube.com/embed?v=nbDd46e_LpE&list=PLxCzCOWd7aiHMonh3G6QNKq53C6oNXGrX&index=3">
-                        </iframe>
-                        
-                     </div>
+                     
                   <div class="modal-footer">
-                     <a download id="pdf" href="#" style="float:left"><h3>youtubelink</h3></a>
+                     <!-- <a download id="pdf" href="#" style="float:left"><h3>youtubelink</h3></a> -->
                       <button class="btn btn-primary" data-dismiss="modal">close</button>
                   </div>
               </div>

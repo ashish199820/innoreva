@@ -48,11 +48,13 @@ License URI: http://www.gnu.org/licenses/gpl.html
 }
 body,html{
   overflow-x:hidden;
+   background-image: url('../download.jpg');background-repeat: repeat;
 }
 body {
 font-family: 'Merriweather', serif;
   overflow-x: hidden !important;
   background:white;
+  /* background-image: url('../background.jpg');background-repeat: repeat; */
 }
 
 ul{
@@ -761,9 +763,12 @@ div[data-dimension] {
   margin-right: 0px;
 }
 .single_tutors {
-  /* display: inline;
+  /* 
   min-height: 150px;
   padding-bottom: 15px; */
+  margin: 5px;
+  overflow-wrap: break-word;
+  
 }
 .tutors_thumb {
   border-radius: 80%;
