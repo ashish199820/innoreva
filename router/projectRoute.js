@@ -16,6 +16,7 @@ router.post('/', async function (req, res) {
     // var len = req.body.image.length;                    ///////to create downloadble link for pdf on dropbox 
     // var image = req.body.image.substr(0,len-1);
     // image=image+'1';
+    var image =  "https://www.youtube.com/embed/"+ req.body.image.substr(32);
     try {
         var data = await project.create({
             title: req.body.title,

@@ -37,6 +37,7 @@ License URI: http://www.gnu.org/licenses/gpl.html
 /* #gallery{
   background: black;
 } */
+
 .project{
   background: #37c6f5;
   margin:1%;
@@ -172,7 +173,7 @@ img{
 }
 #navbar{overflow-x: hidden;}
 .navbar-default .navbar-nav > li > a {
-  color: #000;
+  color:wheat;
   padding: 30px 15px;
   text-transform: uppercase;
   -webkit-transition: all 0.5s;

@@ -15,7 +15,7 @@
 <form action="/post/image" method="POST">
     <div class="form-group">
         <label for="link">link of google drive or fb post:</label>
-<input type="text" name= "url" placeholder="name" class="form-control">
+<input type="text" name= "url" placeholder="link from dropbox" class="form-control">
 <label >tag</label>
 <select name="tag" class="form-control">
     <% tags.forEach((data)=>{%>
@@ -47,12 +47,12 @@
     <div class="form-group">
     <label >enter the project title:</label>
     <input type="text" name= "title" placeholder="title" class="form-control">
-    <label >image link:</label>
-    <input type="text" name= "image" placeholder="image link" class="form-control">
+    <label >youtube link:</label>
+    <input type="text" name= "image" placeholder="youtubelink format(https://www.youtube.com/watch?v=abcdefg)" class="form-control">
     <label >project brief:</label>
     <input type="text" name= "brief" placeholder="brief description" class="form-control">
-    <label >pdf link (optional):</label>
-    <input type="text" name= "pdflink" placeholder="pdf-link" class="form-control">
+    <!-- <label >pdf link (optional):</label>
+    <input type="text" name= "pdflink" placeholder="pdf-link" class="form-control"> -->
     <button class="btn btn-primary btn-large"> submit</button>  <!--to post the form-->
     </div>
     </form>

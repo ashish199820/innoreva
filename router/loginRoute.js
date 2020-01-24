@@ -23,7 +23,7 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 // router.set('view engine','ejs');
 router.use(bodyParser.urlencoded({extended: true}));
-
+ 
 router.get('/', async function (req, res) {
     try {
         res.render('login.ejs');
