@@ -1,16 +1,34 @@
 var express = require('express');
-var router = express.Router();
+var router = express.Router(),
+    mongoose = require("mongoose"),
+    passport = require("passport"),
+    bodyParser = require("body-parser"),
+    localStrategy = require("passport-local"),
+    passportLocalMongoose = require("passport-local-mongoose"),
+    User = require("../model/user");
+
 var urls = require("url");
 var jwt = require("../app");
 var Gallery = require("../model/gallery");
 var Tag = require("../model/tag");
-const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/innoreva', { useNewUrlParser: true, useUnifiedTopology: true }, () => {
     console.log("db connected in post route");
 });
 
+router.use(require("express-session")({
+    secret: "secret!",
+    resave: false,
+    saveUninitialized: false
+}));
+router.use(passport.initialize());
+router.use(passport.session());
+passport.use(new localStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+router.use(bodyParser.urlencoded({extended: true}));
 
-router.post('/', verifyToken, async function (req, res) {
+
+router.get('/', isLoggedIn, async function (req, res) {
     try {
         Tag.find({}, (err, data) => {
             if (err) {
@@ -19,7 +37,7 @@ router.post('/', verifyToken, async function (req, res) {
             else {
                 console.log("Rendering FORM.EJS");
                 res.render('form.ejs', { tags: data });
-                console.log("rendered")
+                // console.log("rendered")
                 // res.send();
                 // !!DANGER!!  !!DANGER!! note the above doesn't displays the post page but the index.ejs ajax sucess document.write() does, be carefull while debugging.
             }
@@ -33,7 +51,7 @@ router.post('/', verifyToken, async function (req, res) {
 });
 
 
-router.post('/image', verifyToken, async function (req, res) {
+router.post('/image', isLoggedIn, async function (req, res) {
     try {
         var len = req.body.url.length;
         var image = req.body.url.substr(0, len - 1);
@@ -52,7 +70,7 @@ router.post('/image', verifyToken, async function (req, res) {
     }
 
 })
-router.post('/tag', verifyToken, async function (req, res) {
+router.post('/tag', isLoggedIn, async function (req, res) {
     console.log(req.body);
     try {
         var tag_data = await Tag.create({
@@ -66,33 +84,43 @@ router.post('/tag', verifyToken, async function (req, res) {
     }
 })
 
-function verifyToken(req, res, next) {
-    console.log("Token not lost: "); console.log(req.body);
-    var token = req.body.token;
-    const bearerHeader = req.headers['auhtorization']
-    if (typeof (bearerHeader) !== 'undefined') {
-        const bearer = bearerHeader.split(' ');
-        const bearerToken = bearer[1];
-        req.token = bearerToken;
-        console.log("Token Recieved at backend");
-        console.log(req.token);
-        jwt.verify(bearerToken, "Innoreva@SecretKy3786", (err, authData) => {
-            if (err) {
-                console.log("Middleware denied access");
-                res.sendStatus(403);
-            }
-            else {
-                req.authData = authData;
-                console.log("Usre filing request"+authData)
-                next();
-            }
-        });
+
+function isLoggedIn(req,res,next){
+    if(req.isAuthenticated()){
+        console.log("User Authenticated"+req.body.username);
+        return next();
     }
-    else {
-        console.log("token lost at middleware check!")
-        res.sendStatus(403);
-    }
+    res.redirect("/login");
 }
+
+
+// function verifyToken(req, res, next) {
+//     console.log("Token not lost: "); console.log(req.body);
+//     var token = req.body.token;
+//     const bearerHeader = req.headers['auhtorization']
+//     if (typeof (bearerHeader) !== 'undefined') {
+//         const bearer = bearerHeader.split(' ');
+//         const bearerToken = bearer[1];
+//         req.token = bearerToken;
+//         console.log("Token Recieved at backend");
+//         console.log(req.token);
+//         jwt.verify(bearerToken, "Innoreva@SecretKy3786", (err, authData) => {
+//             if (err) {
+//                 console.log("Middleware denied access");
+//                 res.sendStatus(403);
+//             }
+//             else {
+//                 req.authData = authData;
+//                 console.log("Usre filing request"+authData)
+//                 next();
+//             }
+//         });
+//     }
+//     else {
+//         console.log("token lost at middleware check!")
+//         res.sendStatus(403);
+//     }
+// }
 
 
 module.exports = router;
