@@ -46,10 +46,10 @@ License URI: http://www.gnu.org/licenses/gpl.html
   overflow-wrap: break-word;
 
 }
-body,html{
+/* body,html{
   overflow-x:hidden;
    background-image: url('../download.jpg');background-repeat: repeat;
-}
+} */
 body {
 font-family: 'Merriweather', serif;
   overflow-x: hidden !important;

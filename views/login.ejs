@@ -273,12 +273,17 @@
                 <button class="form-btn1">SIGN UP</button>
             </div>
             <div class="login">
-                <h2 class="form-header">LOGIN</h2>
-                <input type="text" id="emails" placeholder="Email"><i class="fa fa-envelope-o"></i></input>
-                <input type="password" id="passs" placeholder="Password"><i class="fa fa-lock"></i></input>
-                <button class="form-btn">LOGIN</button>
-                <a class="forgot" href="#">Forgot password</a>
-
+                <form action="/Login/user" method="POST">
+                    <h2 class="form-header">LOGIN</h2>
+                    <input type="text" id="users" name="username" placeholder="Enter Full Name"><i
+                        class="fa fa-user"></i></input>
+                    <!-- <input type="text" id="email" name="email" placeholder="Email"><i
+                        class="fa fa-envelope-o"></i></input> -->
+                    <input type="password" id="pass" name="password" placeholder="Password"><i
+                        class="fa fa-lock"></i></input>
+                    <button class="form-btn">LOGIN</button>
+                    <a class="forgot" href="#">Forgot password</a>
+                </form>
             </div>
         </div>
     </div>
@@ -303,30 +308,29 @@
             });
 
             // writing Ajax to send data from client side to the server side.
-            log.on('click', function () {
-                var emailId = document.getElementById('emails').value;
-                var pass = document.getElementById('passs').value;
+            // log.on('click', function () {
+            //     var emailId = document.getElementById('emails').value;
+            //     var pass = document.getElementById('passs').value;
 
-                var usr_obj = {
-                    email: emailId,
-                    password: pass
-                }
-                console.log("client: " + usr_obj);
-                $.ajax({
-                    url: 'http://localhost:3000/Login/user',
-                    data: usr_obj,
-                    type: 'POST',
-                    success: function (data) {
-                        window.localStorage.setItem('token_user', data.toString());
-                        console.log(data);
-                        window.location.replace("http://localhost:3000/");
-                    },
-                    error: function (xhr, status, error) {
-                        console.log('Error: ' + error.message);
-                    },
-                });
-            })
-
+            //     var usr_obj = {
+            //         email: emailId,
+            //         password: pass
+            //     }
+            //     console.log("client: " + usr_obj);
+            //     $.ajax({
+            //         url: 'http://localhost:3000/Login/user',
+            //         data: usr_obj,
+            //         type: 'POST',
+            //         success: function (data) {
+            //             window.localStorage.setItem('token_user', data.toString());
+            //             console.log(data);
+            //             window.location.replace("http://localhost:3000/");
+            //         },
+            //         error: function (xhr, status, error) {
+            //             console.log('Error: ' + error.message);
+            //         },
+            //     });
+            // })
         });
     </script>
 </body>
