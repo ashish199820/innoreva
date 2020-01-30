@@ -140,21 +140,6 @@ img{
   outline: none;
 }
 
-::-webkit-scrollbar {
-  background-color: #1c1e1f;
-  color: #c5c1b9;
-}
-::-webkit-scrollbar-corner {
-  background-color: #181a1b;
-}
-::selection {
-  background-color: #005ccc;
-  color: #ffffff;
-}
-::-webkit-scrollbar-thumb {
-  background-color: #2a2c2e;
-}
-
 /*--------------------*/
 /* HOME HEADER */
 /*--------------------*/
@@ -341,7 +326,6 @@ img{
   text-transform: uppercase;
   position: relative;
   margin-bottom: 20px;
-  color:white;
 }
 .titile:after{
   content: "";
@@ -389,7 +373,6 @@ img{
   height: 100%;
 }
 .news_tab .media-body > a {
-  color:white;
   display: block;
   font-size: 15px;
   font-weight: bold;
@@ -461,7 +444,7 @@ img{
   float: left;
   display: inline;
   width: 100%;
-  background-color: #1B1C1E;
+  background-color: #f6f6f6;
   padding: 60px 0px;  
 }
 .single_whyus_top{
@@ -488,7 +471,6 @@ img{
   position: relative;
   text-align: center;
   text-transform: uppercase;
-  color:#FFF;
 }
 .whyus_icon{
   border-radius: 150px;
@@ -1733,7 +1715,7 @@ div[data-dimension] {
   top: 15px;  
 }
 #default{
-  background-color: #264B5E;
+  background-color: #78adc9;
 }
 #yellow{
   background-color: #ffd133;
