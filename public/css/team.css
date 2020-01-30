@@ -114,14 +114,15 @@ body {
   min-height: 100vh;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .container {
     max-width: 768px;
     margin: 0 auto;
   }
-}
+} */
 
 .section {
+  background-color: #1b1c1e;
   padding: 50px;
   width: 100%;
   height: 100%;
@@ -365,6 +366,7 @@ img {
 }
 #team {
     padding: 150px 0;
+    background-color: #1b1c1e;
 }
 /* #fun-fact, #team {
     background: linear-gradient(-45deg, #ff7675, #303952);
@@ -536,11 +538,11 @@ img {
     right: 0
 }
 
-@media screen and (max-width:1200px) {
+/* @media screen and (max-width:1200px) {
     #team {
         padding: 120px 0
     }
-}
+} */
 
 @media screen and (max-width:991px) {
     #team {
