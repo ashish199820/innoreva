@@ -1,9 +1,11 @@
 var express = require("express");
 var dotenv = require("dotenv");
 var app = express();
+var cors =require('cors');
 var bodyParser = require("body-parser");
 var mongoose = require('mongoose'),
-    passport = require("passport"),
+    passport = require("passport");
+app.use(cors());
     localStrategy = require("passport-local"),
     passportLocalMongoose = require("passport-local-mongoose"),
     User = require("./model/user");
@@ -16,8 +18,8 @@ var projectRoute = require('./router/projectRoute');
 var loginRoute = require('./router/loginRoute');
 var signupRoute = require('./router/signupRoute');
 
-mongoose.connect("mongodb://localhost/innoreva", { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
-    console.log("db connected");
+mongoose.connect(process.env.REMOTEDB, { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
+    console.log("db connected");///use process.env.LOCALDB to connect to local mmongoDB server
 });
 
 app.use(require("express-session")({

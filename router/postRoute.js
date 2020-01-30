@@ -11,9 +11,9 @@ var urls = require("url");
 var jwt = require("../app");
 var Gallery = require("../model/gallery");
 var Tag = require("../model/tag");
-mongoose.connect('mongodb://localhost:27017/innoreva', { useNewUrlParser: true, useUnifiedTopology: true }, () => {
-    console.log("db connected in post route");
-});
+// mongoose.connect('mongodb://localhost:27017/innoreva', { useNewUrlParser: true, useUnifiedTopology: true }, () => {
+//     console.log("db connected in post route");
+// });
 
 router.use(require("express-session")({
     secret: "secret!",
@@ -52,6 +52,11 @@ router.get('/', isLoggedIn, async function (req, res) {
 
 
 router.post('/image', isLoggedIn, function (req, res) {
+     // var pathname = url.parse(req.body.pdflink);
+    var len = req.body.url.length;                    ///////to create downloadble link for pdf on dropbox 
+    var image = req.body.url.substr(0,len-1);
+    image=image+'1';
+    req.body.url= image;
     try {
         img_data = new Gallery(req.body);
         console.log(img_data);

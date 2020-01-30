@@ -7,9 +7,9 @@ var router = express.Router(),
     passportLocalMongoose = require("passport-local-mongoose"),
     User = require("../model/user");
 
-mongoose.connect('mongodb://localhost:27017/innoreva', { useNewUrlParser: true, useUnifiedTopology: true }, () => {
-    console.log("db connected in signup route");
-});
+// mongoose.connect('mongodb://localhost:27017/innoreva', { useNewUrlParser: true, useUnifiedTopology: true }, () => {
+//     console.log("db connected in signupfdfskf route");
+// });
 
 router.use(require("express-session")({
     secret: "secret!",
