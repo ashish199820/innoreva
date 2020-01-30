@@ -17,13 +17,15 @@ const ImageSchema = new mongoose.Schema({
 });
 Image= mongoose.model('Image', ImageSchema);
 
-function validateImage(image){
-        const Schema={
-                url:Joi.string().required(),
-                tag:Joi.string().required(),
-                description:Joi.string()
-        }
-}
-exports.validateImage=validateImage;
-exports.ImageSchema=ImageSchema;
-exports.Gallery=Image;
+// function validateImage(image){
+//         const Schema={
+//                 url:Joi.string().required(),
+//                 tag:Joi.string().required(),
+//                 description:Joi.string()
+//         }
+// }
+// exports.validateImage=validateImage;
+// exports.ImageSchema=ImageSchema;
+// exports.Gallery=Image;
+
+module.exports = Image;

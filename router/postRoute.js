@@ -25,7 +25,7 @@ router.use(passport.session());
 passport.use(new localStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
-router.use(bodyParser.urlencoded({extended: true}));
+router.use(bodyParser.urlencoded({ extended: true }));
 
 
 router.get('/', isLoggedIn, async function (req, res) {
@@ -51,25 +51,27 @@ router.get('/', isLoggedIn, async function (req, res) {
 });
 
 
-router.post('/image', isLoggedIn, async function (req, res) {
+router.post('/image', isLoggedIn, function (req, res) {
     try {
-        var len = req.body.url.length;
-        var image = req.body.url.substr(0, len - 1);
-        var url = image + '1';
-        var data = await Gallery.create({
-            url: url,
-            tag: req.body.tag,
-            description: req.body.description
-        })
-        console.log(data);
+        img_data = new Gallery(req.body);
+        console.log(img_data);
+        img_data.save((err, res) => {
+            if (err) {
+                console.log(err);
+            }
+            else {
+                console.log(res);
+            }
+        });
         res.redirect('/post');
     }
     catch (err) {
         console.log(err);
-        res.send("unable to create db");
+        res.send("unable to save to db");
     }
 
-})
+});
+
 router.post('/tag', isLoggedIn, async function (req, res) {
     console.log(req.body);
     try {
@@ -85,9 +87,9 @@ router.post('/tag', isLoggedIn, async function (req, res) {
 })
 
 
-function isLoggedIn(req,res,next){
-    if(req.isAuthenticated()){
-        console.log("User Authenticated"+req.body.username);
+function isLoggedIn(req, res, next) {
+    if (req.isAuthenticated()) {
+        console.log("User Authenticated" + req.body.username);
         return next();
     }
     res.redirect("/login");
