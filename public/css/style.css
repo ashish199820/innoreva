@@ -140,21 +140,6 @@ img{
   outline: none;
 }
 
-::-webkit-scrollbar {
-  background-color: #1c1e1f;
-  color: #c5c1b9;
-}
-::-webkit-scrollbar-corner {
-  background-color: #181a1b;
-}
-::selection {
-  background-color: #005ccc;
-  color: #ffffff;
-}
-::-webkit-scrollbar-thumb {
-  background-color: #2a2c2e;
-}
-
 /*--------------------*/
 /* HOME HEADER */
 /*--------------------*/
@@ -173,7 +158,7 @@ img{
   width: 100%;
 }
 .navbar-default .navbar-brand {
-  color: #fff;
+  color: #181a1b;
   font-size: 25px;
   font-weight: bold;
   margin-top: 15px; 
@@ -183,7 +168,7 @@ img{
   color: #fff;
 }
 .navbar-default {
-  background-color:white;
+  background-color:#181a1b;
   border-color: transparent;
 }
 #navbar{overflow-x: hidden;}
@@ -242,6 +227,23 @@ img{
   background-color: transparent;
 }
 
+
+::-webkit-scrollbar {
+  background-color: #1c1e1f;
+  color: #c5c1b9;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #181a1b;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2a2c2e;
+}
+::selection {
+  background-color: #005ccc;
+  color: #ffffff;
+}
 /*--------------------*/
 /* HOME SLIDER SECTION */
 /*--------------------*/
@@ -341,7 +343,7 @@ img{
   text-transform: uppercase;
   position: relative;
   margin-bottom: 20px;
-  color:white;
+  color:#fff;
 }
 .titile:after{
   content: "";
@@ -389,7 +391,7 @@ img{
   height: 100%;
 }
 .news_tab .media-body > a {
-  color:white;
+  color:#fff;
   display: block;
   font-size: 15px;
   font-weight: bold;
@@ -456,12 +458,14 @@ img{
   float: left;
   display: inline;
   width: 100%;
+  background-color: #1b1c1e;
 }
 .whyus_top{
+  margin-top: 30px;
   float: left;
   display: inline;
   width: 100%;
-  background-color: #1B1C1E;
+  background-color: #1b1c1e;
   padding: 60px 0px;  
 }
 .single_whyus_top{
@@ -484,11 +488,11 @@ img{
   width: 50px;
 }
 .title_two {
-  padding-bottom: 0;
+  padding-top:50px;
+  color:#fff;
   position: relative;
   text-align: center;
   text-transform: uppercase;
-  color:#FFF;
 }
 .whyus_icon{
   border-radius: 150px;
