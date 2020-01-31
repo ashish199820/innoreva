@@ -26,13 +26,13 @@
         <% datas.forEach((data)=>{%>
 
         <div class=" col-lg-3 col-md-4 col-sm-6 col-xs-12 " data-target="#projectModal" data-toggle="modal">
-            <div class="jumbotron project h3 " style="background-image: linear-gradient(to bottom right,pink,gray)"
+            <div class="jumbotron project h3 " style="box-shadow: 0 13px 5px -5px black;background-image: linear-gradient(to bottom right,#efe,#101)"
                 data-title="<%=data.title%> " data-image="<%=data.image%>" data-brief="<%=data.brief%>">
                 <iframe width="100%" height="60%" src="<%=data.image%>"></iframe><%=data.title%></div>
         </div>
         <%})%>
-        <div class=" col-lg-3 col-md-4 col-sm-6 col-xs-12 " data-target="#projectModal" data-toggle="modal">
-            <div class="jumbotron project h3" style="background-image: linear-gradient(to bottom right,pink,gray)"
+        <div class=" col-lg-3 col-md-4 col-sm-6 col-xs-12 "  data-target="#projectModal" data-toggle="modal">
+            <div style="box-shadow: 0 13px 5px -5px black;background-image: linear-gradient(to bottom right,#efe,#101)" class="jumbotron project h3" 
                 data-title="Top IOT projects" data-image="https://www.youtube.com/embed/QL-6PdiDTeo"
                 data-brief="IOT is growing at an enormous rate . Here are some of it's applications">
                 <iframe width="100%" height="60%" src="https://www.youtube.com/embed/QL-6PdiDTeo">
