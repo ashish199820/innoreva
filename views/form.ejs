@@ -1,61 +1,85 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-       </title>
-        <link rel="stylesheet" href="/public/style.css">
-       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="/public/myscript.js"></script>
-        <link rel="shortcut icon" type="image/icon" href="../public/img/logoem.jpg" />
-    </head>
-<body >
-<div class="container">
-<h1>create new form tag</h1>
-<form action="/post/image" method="POST">
-    <div class="form-group">
-        <label for="link">link of google drive or fb post:</label>
-<input type="text" name= "url" placeholder="link from dropbox" class="form-control">
-<label >tag</label>
-<select name="tag" class="form-control">
-    <% tags.forEach((data)=>{%>
-       <option value="<%=data.tag%>"><%= data.tag%></option> 
-   <% })%>
-</select>
 
-<label>Description:</label>
-<input type="text" name = "description" placeholder="description" class="form-control">
-<button class="btn btn-primary btn-large"> submit</button>  <!--to post the form-->
-</div>
-</form>
-<br>
-<a href="/gallery">gallery link</a>
-<h3><i>------------------------------or update tags-----------------------------------</i></h3>
-<form action="/post/tag" method="POST">
-<div class="form-group">
-<label >enter unique tag:</label>
-<input type="text" name= "tag" placeholder="tag" class="form-control">
-<button class="btn btn-primary btn-large"> submit</button>  <!--to post the form-->
-</div>
-</form>
-<br>
-<br>
-<a href="/projects">project link</a>
-<h3>add projects</h3>
+<head>
+    <title>
+    </title>
+    <link rel="stylesheet" href="/public/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/public/myscript.js"></script>
+    <link rel="shortcut icon" type="image/icon" href="../public/img/logoem.jpg" />
+</head>
+<style>
+    body {
+        background-color: #1b1c1e;
+        color: #fff;
+    }
 
-<form action="/projects" method="POST">
-    <div class="form-group">
-    <label >enter the project title:</label>
-    <input type="text" name= "title" placeholder="title" class="form-control">
-    <label >youtube link:</label>
-    <input type="text" name= "image" placeholder="youtubelink format(https://www.youtube.com/watch?v=abcdefg)" class="form-control">
-    <label >project brief:</label>
-    <input type="text" name= "brief" placeholder="brief description" class="form-control">
-    <!-- <label >pdf link (optional):</label>
+    .form-control {
+        background-color: rgb(27, 29, 30);
+        color: rgb(255, 255, 255);
+    }
+    .form-control {
+    border-top-color: rgb(54, 63, 72);
+    border-right-color: rgb(54, 63, 72);
+    border-bottom-color: rgb(54, 63, 72);
+    border-left-color: rgb(54, 63, 72);
+}
+</style>
+
+<body>
+    <div class="container">
+        <h1>create new form tag</h1>
+        <form action="/post/image" method="POST">
+            <div class="form-group">
+                <label for="link">link of google drive or fb post:</label>
+                <input type="text" name="url" placeholder="link from dropbox" class="form-control">
+                <label>tag</label>
+                <select name="tag" class="form-control">
+                    <% tags.forEach((data)=>{%>
+                    <option value="<%=data.tag%>"><%= data.tag%></option>
+                    <% })%>
+                </select>
+
+                <label>Description:</label>
+                <input type="text" name="description" placeholder="description" class="form-control">
+                <button class="btn btn-primary btn-large" style="margin-top: 10px;"> submit</button>
+                <!--to post the form-->
+            </div>
+        </form>
+        <br>
+        <a href="/gallery">gallery link</a>
+        <h3><i>------------------------------or update tags-----------------------------------</i></h3>
+        <form action="/post/tag" method="POST">
+            <div class="form-group">
+                <label>enter unique tag:</label>
+                <input type="text" name="tag" placeholder="tag" class="form-control">
+                <button class="btn btn-primary btn-large" style="margin-top: 10px;"> submit</button>
+                <!--to post the form-->
+            </div>
+        </form>
+        <br>
+        <br>
+        <a href="/projects">project link</a>
+        <h3>add projects</h3>
+
+        <form action="/projects" method="POST">
+            <div class="form-group">
+                <label>enter the project title:</label>
+                <input type="text" name="title" placeholder="title" class="form-control">
+                <label>youtube link:</label>
+                <input type="text" name="image"
+                    placeholder="youtubelink format(https://www.youtube.com/watch?v=abcdefg)" class="form-control">
+                <label>project brief:</label>
+                <input type="text" name="brief" placeholder="brief description" class="form-control">
+                <!-- <label >pdf link (optional):</label>
     <input type="text" name= "pdflink" placeholder="pdf-link" class="form-control"> -->
-    <button class="btn btn-primary btn-large"> submit</button>  <!--to post the form-->
+                <button class="btn btn-primary btn-large" style="margin-top: 10px;"> submit</button>
+                <!--to post the form-->
+            </div>
+        </form>
     </div>
-    </form>
-</div>
 </body>
+
 </html>
