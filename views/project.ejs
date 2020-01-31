@@ -26,8 +26,7 @@
     <div class="row">
         <% datas.forEach((data)=>{%>
         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" data-target="#projectModal" data-toggle="modal">
-            <div class="thumbnail project" style="box-shadow: 0 13px 5px -5px;background-color: #1b1c1e;color:whitesmoke; border:none"
-                data-title="<%=data.title%> " data-image="<%=data.image%>" data-brief="<%=data.brief%>">
+            <div onclick="proFun('<%=data.title%>','<%=data.image%>','<%=data.brief%>')" class="thumbnail project" style="box-shadow: 0 13px 5px -5px;background-color: #1b1c1e;color:whitesmoke; border:none">
                 <iframe width="100%" height="60%" src="<%=data.image%>"></iframe>
                 <div class="caption" style="color:#fff">
                     <h3><%=data.title%></h3>
@@ -62,7 +61,7 @@
             <div class="modal-content" style="background:#1b1c1e">
                 <div class="modal-header">
                     <button class="close" data-dismiss="modal">&times;</button>
-                    <h2 id="modalHeader" style="color:#fff"></h2>
+                    <h2 id="modalHeader" style="color:#fff;text-align: center;"></h2>
                 </div>
                 <div class="modal-body">
                     <iframe id="modalImage" class="img-responsive center-block" width="350" height="250"
