@@ -1487,7 +1487,7 @@ div[data-dimension] {
 .gallery_area a>img{
   width: 80%;
   height: 100%;  
-  border: 4px inset powderblue;
+  
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
@@ -1495,10 +1495,9 @@ div[data-dimension] {
 .gallery_area a:hover .gallery_img{
   transform: scale(2.2);
 }
-.gallery_img{
-  margin:10%
-
-}
+/* .gallery_img{
+ 
+} */
 .view_btn {
   display: none;
   left: -100%;
