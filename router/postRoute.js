@@ -52,11 +52,15 @@ router.get('/', isLoggedIn, async function (req, res) {
 
 
 router.post('/image', isLoggedIn, function (req, res) {
-     // var pathname = url.parse(req.body.pdflink);
-    var len = req.body.url.length;                    ///////to create downloadble link for pdf on dropbox 
-    var image = req.body.url.substr(0,len-1);
-    image=image+'1';
-    req.body.url= image;
+     //var pathname = url.parse(req.body.pdflink);
+     if(req.body.url.includes('dropbox'))
+     {
+        var len = req.body.url.length;                    ///////to create downloadble link for pdf on dropbox 
+        var image = req.body.url.substr(0,len-1);
+        image=image+'1';
+        req.body.url= image;
+     }
+    
     try {
         img_data = new Gallery(req.body);
         console.log(img_data);
