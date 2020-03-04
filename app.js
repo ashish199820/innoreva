@@ -43,7 +43,7 @@ app.use('/gallery', galleryRoute);
 app.use('/post', postRoute);
 app.use('/projects', projectRoute);
 app.use('/Login', loginRoute);
-app.use('/Signup', signupRoute);
+// app.use('/Signup', signupRoute);
 
 app.get('/contacts', (req, res) => {
     res.render('contact');
