@@ -18,7 +18,7 @@ var projectRoute = require('./router/projectRoute');
 var loginRoute = require('./router/loginRoute');
 var signupRoute = require('./router/signupRoute');
 
-mongoose.connect(process.env.REMOTEDB, { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
+mongoose.connect(process.env.LOCALDB, { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
     console.log("db connected");///use process.env.LOCALDB to connect to local mmongoDB server
 });
 
