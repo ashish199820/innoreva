@@ -11,20 +11,20 @@ setInterval(() => {
       .siblings()
       .removeClass("team__members--show");
   }
-}, 3000);
+}, 2000);
 function mediaSize() { 
   	
 $(members).hover(
 
   () => {
-    if (window.matchMedia('(min-width: 480px)').matches) {
+    if (window.matchMedia('(min-width: 0px)').matches) {
     $(members).removeClass("team__members--show");
     isHover = true;
       console.log('hover');
     }
   },
   () => {
-     if (window.matchMedia('(min-width: 480px)').matches) {
+     if (window.matchMedia('(min-width:0px)').matches) {
     isHover = false;
      }
   }

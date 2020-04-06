@@ -2,6 +2,7 @@
 <div id="navbar" class="navbar-collapse collapse">
     <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
         <li "><a href="/">Home</a></li>
+        <li><a href="/team">Team</a></li>
         <li class ="active"><a href="/projects">Projects</a></li>
         <!-- <li><a href="/post" class="project-btn">Upload Projects</a></li> -->
         <li><a href="/gallery">Gallery</a></li>
@@ -31,7 +32,7 @@
                 <iframe width="100%" height="60%" src="<%=data.image%>"></iframe>
                 <div class="caption" style="color:#fff">
                     <h3><%=data.title%></h3>
-                    <p><%=data.brief%></p>
+                    <p><%=data.brief.substr(0,Math.min(60,data.brief.length))+'...'%></p>
                     <p><a href="#" class="btn btn-primary" role="button">Read More >></a> </p>
                 </div>
             </div>
@@ -65,7 +66,7 @@
                     <h2 id="modalHeader" style="color:#fff;text-align: center;"></h2>
                 </div>
                 <div class="modal-body">
-                    <iframe id="modalImage" class="img-responsive center-block" width="350" height="250"
+                    <iframe id="modalImage" class="img-responsive center-block" width="350" height="450"
                         style="padding-bottom: 10%;margin-bottom: 5%;">
                     </iframe>
                     <!-- <img id="modalImage" src=" " alt="" class="img-responsive center-block"> -->
