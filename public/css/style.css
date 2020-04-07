@@ -948,7 +948,7 @@ div[data-dimension] {
   float: left;
   display: inline;
   width: 100%;
-  background-color: #1e2223;
+  background-color: #ffffff;
   padding: 60px 0px;
 }
 .single_footer_widget {
@@ -958,12 +958,12 @@ div[data-dimension] {
   width: 100%;
 }
 .single_footer_widget > h3 {
-  color: #39a0ca;
+  color: #000000;
   text-transform: uppercase;
   margin-bottom: 25px;
 }
 .single_footer_widget>p{
-  color: #fff;
+  color: #000;
 }
 .footer_widget_nav li a {
   font-size: 15px;
