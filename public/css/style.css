@@ -62,7 +62,8 @@ font-family: 'Merriweather', serif;
 hr{
 	width: 80%;
 	border-top: 5px solid #f8f8f8;
-	border-bottom: 5px solid rgba(0,0,0,.2);
+  border-bottom: 5px solid rgba(0,0,0,.2);
+  
 }
 
 ul{
@@ -179,7 +180,7 @@ img{
   color: #fff;
 }
 .navbar-default {
-  background-color:#181a1b;
+  background-color:#f8f8f8;
   border-color: transparent;
 }
 #navbar{overflow-x: hidden;}
@@ -958,7 +959,7 @@ div[data-dimension] {
   width: 100%;
 }
 .single_footer_widget > h3 {
-  color: #000000;
+  color: #39a0ca;
   text-transform: uppercase;
   margin-bottom: 25px;
 }
